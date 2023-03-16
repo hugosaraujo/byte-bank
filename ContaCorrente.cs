@@ -11,7 +11,7 @@ namespace ByteBank
         public string titular;
         public string conta;
         public string agencia;
-        public double saldo; 
+        public double saldo = 100; 
 
         public void Depositar(double valor)
         {
@@ -19,21 +19,17 @@ namespace ByteBank
         }
         public bool Sacar(double valor)
         {   
-            if (valor <= this.saldo)
-            {
+            if (valor <= this.saldo) {
                 this.saldo -= valor;
                 return true;
-            } else
-            {
+            } else {
                 return false; 
             }
         }
 
         public bool Transferir(double valor, ContaCorrente destino)
         {
-            if(this.saldo < valor)
-            {
-
+            if(this.saldo < valor) {
                 return false; 
             } else {
                 this.Sacar(valor);
