@@ -37,5 +37,12 @@ namespace ByteBank
                 return true;
             }
         }
+        public void ExibirDadosConta() 
+        {
+            Console.WriteLine("Titular: " + this.titular);
+            Console.WriteLine("Conta: " + this.conta);
+            Console.WriteLine("Numero Agência: " + this.agencia);
+            Console.WriteLine("Saldo:" + this.saldo);
+        }
     }
 }
