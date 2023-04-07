@@ -11,7 +11,11 @@ namespace ByteBank.ContaCorrente
         public int numeroAgencia;
         public string conta;
         public string titular;
-        public double saldo; 
+        public decimal saldo; 
 
+        public void Depositar(decimal valor) 
+        {
+            this.saldo += valor;
+        }
     }
 }
