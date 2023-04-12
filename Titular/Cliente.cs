@@ -9,15 +9,14 @@ namespace ByteBank.Titular
 {
     public class Cliente
     {
-        public string nome;
-        public string cpf;
-        public string profissao;
-
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Profissao { get; set; }
         public void ExibirInfoCliente ()
         {
-            Console.WriteLine("Nome: " + nome);
-            Console.WriteLine("CPF: " + cpf);
-            Console.WriteLine("Profissão: " + profissao);
+            Console.WriteLine("Nome: " + Nome);
+            Console.WriteLine("CPF: " + Cpf);
+            Console.WriteLine("Profissão: " + Profissao);
         }
     }
 }

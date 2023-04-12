@@ -65,7 +65,6 @@ using ByteBank.Titular;
 //Console.WriteLine($"Número de Conta: {contaDoJoel.conta}");
 //Console.WriteLine($"Saldo: R$ {String.Format("{0:00.00}", contaDoJoel.saldo)}");
 
-
 //ContaCorrente contaDoFelipe = new ContaCorrente();
 //contaDoFelipe.titular = "Felipe K. Pinto";
 //contaDoFelipe.numeroAgencia = 1396;
@@ -76,31 +75,42 @@ using ByteBank.Titular;
 //Console.WriteLine($"Saldo: R$ {string.Format("{0:00.00}", contaDoFelipe.saldo)}");
 
 
-Cliente cliente = new Cliente();
-cliente.nome = "Gabriel Garcia Marquez";
-cliente.cpf = "893.726.511-08";
-cliente.profissao = "Escritor";
+//Cliente cliente = new Cliente();
+//cliente.nome = "Gabriel Garcia Marquez";
+//cliente.cpf = "893.726.511-08";
+//cliente.profissao = "Escritor";
 
-ContaCorrente conta1 = new ContaCorrente();
-conta1.titular = cliente;
-conta1.numeroAgencia = 1528;
-conta1.conta = "891234-0";
+//ContaCorrente conta1 = new ContaCorrente();
+//conta1.titular = cliente;
+//conta1.numeroAgencia = 1528;
+//conta1.conta = "891234-0";
 
-cliente.ExibirInfoCliente();
-Console.WriteLine("Saldo: " + conta1.saldo);
+//cliente.ExibirInfoCliente();
+//Console.WriteLine("Saldo: " + conta1.saldo);
 
-ContaCorrente conta2 = new ContaCorrente();
-conta2.titular = new Cliente();
-conta2.titular.nome = "Rina Sawayama";
-conta2.titular.cpf = "923.927.047-04";
-conta2.titular.profissao = "Cantora";
-conta2.numeroAgencia = 1829;
-conta2.conta = "1010-2";
+//ContaCorrente conta2 = new ContaCorrente();
+//conta2.titular = new Cliente();
+//conta2.titular.nome = "Rina Sawayama";
+//conta2.titular.cpf = "923.927.047-04";
+//conta2.titular.profissao = "Cantora";
+//conta2.numeroAgencia = 1829;
+//conta2.conta = "1010-2";
 
-conta2.Depositar(900);
+//conta2.Depositar(900);
 
-Console.WriteLine( );
-Console.WriteLine("Nome: " + conta2.titular.nome);
-Console.WriteLine("Saldo: " + conta2.saldo);
+//Console.WriteLine( );
+//Console.WriteLine("Nome: " + conta2.titular.nome);
+//Console.WriteLine("Saldo: " + conta2.saldo);
+
+ContaCorrente conta4 = new ContaCorrente();
+
+conta4.Titular = new Cliente();
+conta4.Titular.Nome = "Rosalia";
+conta4.Titular.Cpf = "932.778.238-04";
+conta4.Titular.Profissao = "Cantora";
+conta4.Agencia = 2798;
+conta4.Conta = "2020-X";
+
+conta4.ExibirInfoConta();
 
 Console.ReadLine();

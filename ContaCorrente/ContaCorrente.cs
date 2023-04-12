@@ -9,11 +9,19 @@ namespace ByteBank.ContaCorrente
 {
     public class ContaCorrente
     {
-        public int numeroAgencia;
-        public string conta;
-        public Cliente titular;
-        public decimal saldo=100; 
+        public int Agencia { get; set; }
+        public string Conta { get; set; }
+        public Cliente Titular { get; set; }
+        private decimal saldo=100; 
 
+
+        public void ExibirInfoConta() 
+        {
+            Console.WriteLine($"Titular: {this.Titular.Nome}");
+            Console.WriteLine($"Agência: {this.Agencia}");
+            Console.WriteLine($"Número de Conta: {this.Conta}");
+            Console.WriteLine($"Saldo: R$ {String.Format("{0:00.00}", this.saldo)}");
+        }
         public void Depositar(decimal valor) 
         {
             this.saldo += valor;
