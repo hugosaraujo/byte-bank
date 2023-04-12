@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank.Titular;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ByteBank.ContaCorrente
     {
         public int numeroAgencia;
         public string conta;
-        public string titular;
+        public Cliente titular;
         public decimal saldo=100; 
 
         public void Depositar(decimal valor) 
