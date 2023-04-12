@@ -7,3 +7,5 @@
 - utilização de objetos como parâmetros de um atributo dentro de uma outra classe; 
 - utilização de namespaces e organização de diretórios; 
 - referências nulas e inicialização de classes; 
+- encapsulamente e parâmetros do tipo private; 
+- propriedades e propriedades autoimplementaveis; 
