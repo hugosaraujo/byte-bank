@@ -9,11 +9,11 @@ namespace ByteBank.ContaCorrente
 {
     public class ContaCorrente
     {
+        public static int TotalDeContas { get; private set; }
         public int Agencia { get; set; }
         public string Conta { get; set; }
         public Cliente Titular { get; set; }
         private decimal saldo=100; 
-
 
         public void ExibirInfoConta() 
         {
@@ -51,6 +51,13 @@ namespace ByteBank.ContaCorrente
                 destino.Depositar(valor);
                 return true; 
             }
+        }
+
+        public ContaCorrente(int Agencia, string Conta) 
+        {
+            this.Agencia = Agencia;
+            this.Conta = Conta;
+            TotalDeContas++;
         }
     }
 }

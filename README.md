@@ -9,3 +9,5 @@
 - referências nulas e inicialização de classes; 
 - encapsulamente e parâmetros do tipo private; 
 - propriedades e propriedades autoimplementaveis; 
+- atribuição de método estático; 
+- métodos construtores; 

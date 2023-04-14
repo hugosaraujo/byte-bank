@@ -102,15 +102,33 @@ using ByteBank.Titular;
 //Console.WriteLine("Nome: " + conta2.titular.nome);
 //Console.WriteLine("Saldo: " + conta2.saldo);
 
-ContaCorrente conta4 = new ContaCorrente();
+//ContaCorrente conta4 = new ContaCorrente();
 
-conta4.Titular = new Cliente();
-conta4.Titular.Nome = "Rosalia";
-conta4.Titular.Cpf = "932.778.238-04";
-conta4.Titular.Profissao = "Cantora";
-conta4.Agencia = 2798;
-conta4.Conta = "2020-X";
+//conta4.Titular = new Cliente();
+//conta4.Titular.Nome = "Rosalia";
+//conta4.Titular.Cpf = "932.778.238-04";
+//conta4.Titular.Profissao = "Cantora";
+//conta4.Agencia = 2798;
+//conta4.Conta = "2020-X";
 
-conta4.ExibirInfoConta();
+//conta4.ExibirInfoConta();
+
+
+//Console.WriteLine($"{Cliente.ClientesCadastrados}");
+
+//ContaCorrente conta6 = new ContaCorrente(1920, "20204-X");
+//conta6.Titular = new Cliente();
+
+//Console.WriteLine($"{Cliente.ClientesCadastrados}");
+
+//ContaCorrente conta7 = new ContaCorrente(2001, "90903-X");
+//conta7.Titular = new Cliente();
+
+//Console.WriteLine($"{Cliente.ClientesCadastrados}");
+
+
+ContaCorrente conta5 = new ContaCorrente(1829, "189001-2");
+
+conta5.Titular = new Cliente("Solana Imani Rowe", "909.808.421-04", "Cantora");
 
 Console.ReadLine();
