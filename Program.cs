@@ -1,6 +1,7 @@
 ﻿using ByteBank.ContaCorrente;
 using ByteBank.Titular;
 
+#region
 //ContaCorrente contaDoJoel = new ContaCorrente();
 
 //contaDoJoel.titular = "Joel Embiid";
@@ -126,9 +127,10 @@ using ByteBank.Titular;
 
 //Console.WriteLine($"{Cliente.ClientesCadastrados}");
 
+//ContaCorrente conta5 = new ContaCorrente(1829, "189001-2");
 
-ContaCorrente conta5 = new ContaCorrente(1829, "189001-2");
+//conta5.Titular = new Cliente("Solana Imani Rowe", "909.808.421-04", "Cantora");
 
-conta5.Titular = new Cliente("Solana Imani Rowe", "909.808.421-04", "Cantora");
+//Console.ReadLine();
+#endregion
 
-Console.ReadLine();
