@@ -25,9 +25,9 @@ namespace ByteBank.Titular
 
         public override string ToString()
         {
-            return $"Nome: {this.Nome}, \n" +
-                   $"CPF: {this.Cpf}, \n" +
-                   $"Profissao: {this.Profissao}, \n";
+            return $"Nome: {this.Nome} \n" +
+                   $"CPF: {this.Cpf} \n" +
+                   $"Profissao: {this.Profissao} \n";
         }
     }
 }
