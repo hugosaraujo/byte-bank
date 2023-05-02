@@ -22,16 +22,12 @@ namespace ByteBank.Titular
 
             ClientesCadastrados++;
         }
-        
-        
-        
-        public void ExibirInfoCliente ()
-        {
-            Console.WriteLine("Nome: " + Nome);
-            Console.WriteLine("CPF: " + Cpf);
-            Console.WriteLine("Profissão: " + Profissao);
-        }
 
-        
+        public override string ToString()
+        {
+            return $"Nome: {this.Nome}, \n" +
+                   $"CPF: {this.Cpf}, \n" +
+                   $"Profissao: {this.Profissao}, \n";
+        }
     }
 }

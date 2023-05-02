@@ -134,3 +134,10 @@ using ByteBank.Titular;
 //Console.ReadLine();
 #endregion
 
+infoUsuario();
+void infoUsuario()
+{
+    Cliente ah = new Cliente("Alana Haim", "5555982", "Cantora");
+    Console.WriteLine(ah.ToString());
+}
+
