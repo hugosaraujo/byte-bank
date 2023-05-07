@@ -14,7 +14,7 @@ namespace ByteBank.ContaCorrente
         public int Agencia { get; set; }
         public string Conta { get; set; }
         public Cliente Titular { get; set; }
-        public decimal Saldo { get; private set; }
+        public decimal saldo = 100;
         
 
         public ContaCorrente(int Agencia, string Conta)
@@ -39,17 +39,17 @@ namespace ByteBank.ContaCorrente
             return $"Titular: {this.Titular.Nome}" +
                    $"Agência: {this.Agencia}" +
                    $"Número de Conta: {this.Conta}" +
-                   $"Saldo: R$ {String.Format("{0:00.00}", this.Saldo)}";
+                   $"Saldo: R$ {String.Format("{0:00.00}", this.saldo)}";
         }
         public void Depositar(decimal valor) 
         {
-            this.Saldo += valor;
+            this.saldo += valor;
         }
         public bool Sacar(decimal valor) 
         {
-            if (valor <= this.Saldo)
+            if (valor <= this.saldo)
             {
-                this.Saldo -= valor;
+                this.saldo -= valor;
                 return true;
             }
             else 
@@ -60,7 +60,7 @@ namespace ByteBank.ContaCorrente
 
         public bool Transferir(decimal valor, ContaCorrente destino)
         { 
-            if (this.Saldo < valor)
+            if (this.saldo < valor)
             {
                 return false; 
             }
