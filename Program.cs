@@ -1,10 +1,17 @@
 ﻿using ByteBank.ContaCorrente;
 using ByteBank.Titular;
 
-ContaCorrente conta = new ContaCorrente(2, "1528-X");
-Console.WriteLine(ContaCorrente.TaxaOperacao);
 
-
+try
+{
+    ContaCorrente conta = new ContaCorrente(0, "1528-X");
+}
+catch(ArgumentException ex)
+{
+    Console.WriteLine("Parâmetro com erro" + ex.ParamName);
+    Console.WriteLine("Não é possível criar uma conta com número menor ou igual a zero. Tente Novamente...");
+    Console.WriteLine(ex.Message);
+}
 
 #region
 //ContaCorrente contaDoJoel = new ContaCorrente();

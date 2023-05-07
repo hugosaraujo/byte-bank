@@ -14,14 +14,18 @@ namespace ByteBank.ContaCorrente
         public int Agencia { get; set; }
         public string Conta { get; set; }
         public Cliente Titular { get; set; }
-        public decimal saldo = 100;
+        private decimal saldo = 100;
         
 
         public ContaCorrente(int Agencia, string Conta)
         {
             this.Agencia = Agencia;
             this.Conta = Conta;
-            
+            if (Agencia <= 0)
+            {
+                throw new ArgumentException("Número de agência menor ou igual a zero", nameof(Agencia));
+            }
+            /*
             try 
             {
                 TaxaOperacao = 30 / TotalDeContas;
@@ -30,6 +34,7 @@ namespace ByteBank.ContaCorrente
             {
                 Console.WriteLine("Ocorreu um erro. Não é possível fazer uma divisão com o divisor zero");
             }
+            */
             
             TotalDeContas++;
         }
