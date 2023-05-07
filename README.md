@@ -11,3 +11,5 @@
 - propriedades e propriedades autoimplementaveis; 
 - atribuição de método estático; 
 - métodos construtores; 
+- utilização da classe Object C#; 
+- tratamento de exceções; 

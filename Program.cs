@@ -1,6 +1,11 @@
 ﻿using ByteBank.ContaCorrente;
 using ByteBank.Titular;
 
+ContaCorrente conta = new ContaCorrente(2, "1528-X");
+Console.WriteLine(ContaCorrente.TaxaOperacao);
+
+
+
 #region
 //ContaCorrente contaDoJoel = new ContaCorrente();
 
@@ -133,11 +138,12 @@ using ByteBank.Titular;
 
 //Console.ReadLine();
 #endregion
+#region
+//void infoUsuario()
+//{
+//    Cliente ah = new Cliente("Alana Haim", "5555982", "Cantora");
+//    Console.WriteLine(ah.ToString());
 
-infoUsuario();
-void infoUsuario()
-{
-    Cliente ah = new Cliente("Alana Haim", "5555982", "Cantora");
-    Console.WriteLine(ah.ToString());
-}
 
+//}
+#endregion

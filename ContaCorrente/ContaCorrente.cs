@@ -10,27 +10,46 @@ namespace ByteBank.ContaCorrente
     public class ContaCorrente
     {
         public static int TotalDeContas { get; private set; }
+        public static decimal TaxaOperacao { get; set; }
         public int Agencia { get; set; }
         public string Conta { get; set; }
         public Cliente Titular { get; set; }
-        private decimal saldo=100; 
+        public decimal Saldo { get; private set; }
+        
 
-        public void ExibirInfoConta() 
+        public ContaCorrente(int Agencia, string Conta)
         {
-            Console.WriteLine($"Titular: {this.Titular.Nome}");
-            Console.WriteLine($"Agência: {this.Agencia}");
-            Console.WriteLine($"Número de Conta: {this.Conta}");
-            Console.WriteLine($"Saldo: R$ {String.Format("{0:00.00}", this.saldo)}");
+            this.Agencia = Agencia;
+            this.Conta = Conta;
+            
+            try 
+            {
+                TaxaOperacao = 30 / TotalDeContas;
+            }
+            catch (DivideByZeroException) 
+            {
+                Console.WriteLine("Ocorreu um erro. Não é possível fazer uma divisão com o divisor zero");
+            }
+            
+            TotalDeContas++;
+        }
+
+        public string ExibirInfoConta() 
+        {
+            return $"Titular: {this.Titular.Nome}" +
+                   $"Agência: {this.Agencia}" +
+                   $"Número de Conta: {this.Conta}" +
+                   $"Saldo: R$ {String.Format("{0:00.00}", this.Saldo)}";
         }
         public void Depositar(decimal valor) 
         {
-            this.saldo += valor;
+            this.Saldo += valor;
         }
         public bool Sacar(decimal valor) 
         {
-            if (valor <= this.saldo)
+            if (valor <= this.Saldo)
             {
-                this.saldo -= valor;
+                this.Saldo -= valor;
                 return true;
             }
             else 
@@ -41,7 +60,7 @@ namespace ByteBank.ContaCorrente
 
         public bool Transferir(decimal valor, ContaCorrente destino)
         { 
-            if (this.saldo < valor)
+            if (this.Saldo < valor)
             {
                 return false; 
             }
@@ -53,11 +72,5 @@ namespace ByteBank.ContaCorrente
             }
         }
 
-        public ContaCorrente(int Agencia, string Conta) 
-        {
-            this.Agencia = Agencia;
-            this.Conta = Conta;
-            TotalDeContas++;
-        }
     }
 }
