@@ -21,10 +21,12 @@ namespace ByteBank.ContaCorrente
         {
             this.Agencia = Agencia;
             this.Conta = Conta;
+            
             if (Agencia <= 0)
             {
                 throw new ArgumentException("Número de agência menor ou igual a zero", nameof(Agencia));
             }
+
             /*
             try 
             {
@@ -59,7 +61,7 @@ namespace ByteBank.ContaCorrente
             }
             else 
             {
-                return false;
+                throw new SaldoInsuficienteException("Saldo Insuficente para a operação.");
             }   
         }
 
@@ -77,5 +79,9 @@ namespace ByteBank.ContaCorrente
             }
         }
 
+        public decimal GetSaldo()
+        {
+            return this.saldo;
+        }
     }
 }
