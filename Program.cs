@@ -5,18 +5,21 @@ using System.Reflection.Metadata;
 
 try
 {
-    ContaCorrente conta = new ContaCorrente(289, "1528-X");
+    ContaCorrente conta = new ContaCorrente(0, "1528-X");
 
+    /*
     conta.Sacar(25);
     Console.WriteLine(conta.GetSaldo());
     conta.Sacar(150);
     Console.WriteLine(conta.GetSaldo());
+    */
 }
 catch(ArgumentException ex)
 {
     Console.WriteLine("Parâmetro com erro" + ex.ParamName);
     Console.WriteLine("Não é possível criar uma conta com número menor ou igual a zero. Tente Novamente...");
     Console.WriteLine(ex.Message);
+    Console.WriteLine(ex.StackTrace);
 }
 catch(SaldoInsuficienteException ex)
 {

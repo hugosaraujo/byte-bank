@@ -11,6 +11,8 @@ namespace ByteBank.ContaCorrente
     {
         public static int TotalDeContas { get; private set; }
         public static decimal TaxaOperacao { get; set; }
+        public int ContadorSaquesNaoPermitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidas { get; private set; }
         public int Agencia { get; set; }
         public string Conta { get; set; }
         public Cliente Titular { get; set; }
@@ -61,6 +63,7 @@ namespace ByteBank.ContaCorrente
             }
             else 
             {
+                ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException("Saldo Insuficente para a operação.");
             }   
         }
@@ -69,7 +72,8 @@ namespace ByteBank.ContaCorrente
         { 
             if (this.saldo < valor)
             {
-                return false; 
+                ContadorTransferenciasNaoPermitidas++;
+                throw new SaldoInsuficienteException("Saldo Insuficente para a operação.");
             }
             else 
             {
