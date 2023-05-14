@@ -13,4 +13,6 @@
 - métodos construtores; 
 - utilização da classe Object C#; 
 - tratamento de exceções; 
-- criação das próprias exceções como forma de validação da regra de negócio.
+- criação das próprias exceções como forma de validação da regra de negócio;
+- innerException; 
+- StackTrace Exception. 
